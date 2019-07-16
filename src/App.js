@@ -5,7 +5,7 @@ import NavLink from './components/NavLink';
 import Daily from './components/Daily';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
-import { Nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar, NavItem } from 'react-bootstrap';
 
 class App extends React.Component {
   render() {
@@ -13,18 +13,18 @@ class App extends React.Component {
       <HashRouter>
         <Navbar variant="dark" bg="dark" expand="sm" sticky="top" style={{ "maxHeight": "50px" }}>
           <Navbar.Brand>
-            <Link className="navbar-brand" to="/">Michael Boulos</Link>
+            <Link className="navbar-brand" style={{'color': '#ddfcfe'}} to="/">Michael Boulos</Link>
           </Navbar.Brand>
-          <Nav fill="true" className="w-100 ml-auto">
-            <li className="nav-item">
+          <Nav fill className="w-100 ml-auto">
+            <NavItem style={{'margin': 'auto'}}>
               <NavLink to="/resume">Resume</NavLink>
-            </li>
-            <li className="nav-item">
+            </NavItem>
+            <NavItem style={{'margin': 'auto'}}>
               <NavLink to="/projects">Projects</NavLink>
-            </li>
-            <li className="nav-item">
+            </NavItem>
+            <NavItem style={{'margin': 'auto'}}>
               <NavLink to="/daily-coding-problem">Daily Coding Problem</NavLink>
-            </li>
+            </NavItem>
             {/* <li class="nav-item">
               <a class="nav-link" href="html/contact.html">Contact</a>
             </li> */}
