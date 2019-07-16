@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink as ReactNavLink } from 'react-router-dom';
 
 class NavLink extends React.Component {
     render() {
-        return <Link {...this.props} activeClassName = {{ color: 'red' }}/>
+        return <ReactNavLink {...this.props} activeStyle = {{ font: 'bolder' }}/>
     }
 }
 
