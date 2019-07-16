@@ -5,15 +5,17 @@ import NavLink from './components/NavLink';
 import Daily from './components/Daily';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
+import { Nav, Navbar } from 'react-bootstrap';
 
 class App extends React.Component {
   render() {
     return (
       <HashRouter>
-        <h1>Me IRL</h1>
-        <nav className="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-          <Link className="navbar-brand" to="/">Michael Boulos</Link>
-          <ul className="navbar-nav nav-fill w-100 ml-auto">
+        <Navbar variant="dark" bg="dark" expand="sm" sticky="top" style={{ "maxHeight": "50px" }}>
+          <Navbar.Brand>
+            <Link className="navbar-brand" to="/">Michael Boulos</Link>
+          </Navbar.Brand>
+          <Nav fill="true" className="w-100 ml-auto">
             <li className="nav-item">
               <NavLink to="/resume">Resume</NavLink>
             </li>
@@ -26,8 +28,8 @@ class App extends React.Component {
             {/* <li class="nav-item">
               <a class="nav-link" href="html/contact.html">Contact</a>
             </li> */}
-          </ul>
-        </nav>
+          </Nav>
+        </Navbar>
         <div>
           <Route path="/daily-coding-problem" component={Daily}/>
           <Route path="/projects" component={Projects}/>
