@@ -12,7 +12,7 @@ class Projects extends React.Component {
     render() {
         var projects = [];
         for (let props of this.stuff) {
-            projects.push(<Project projectProps={props}>{props.name}</Project>);
+            projects.push(<Project key={props.id} projectProps={props}>{props.name}</Project>);
         }
 
         return (
