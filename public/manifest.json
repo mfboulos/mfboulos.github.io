@@ -1,11 +1,11 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Michael Boulos, Back-End Software Engineer",
+  "name": "Portfolio Webpage for Michael Boulos, Mathematician and Back-End Software Engineer",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "duck.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/png"
     }
   ],
   "start_url": ".",
