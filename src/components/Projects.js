@@ -1,26 +1,62 @@
 import React from 'react'
-import { Route, Link } from 'react-router-dom';
+import { Accordion } from 'react-bootstrap';
 import Project from './Project';
+import LoadingIcon from './Loading'
 
 class Projects extends React.Component {
-    stuff = [
-        {'id': 123, 'name': 'hello', 'desc': 'this one sucks honestly'},
-        {'id': 222, 'name': 'bye', 'desc': 'in the end, i liked this one a bit more'},
-        {'id': 321, 'name': '345', 'desc': 'pineapple'},
-    ]
+    projects = []
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            isLoading: true
+        }
+    }
+
+    componentDidMount() {
+        fetch('https://api.github.com/users/mfboulos/repos')
+        .then(res => {
+            if (res.ok) {
+                return res.json()
+            }
+            throw new Error('There was a problem retrieving repos!')
+        })
+        .then((data) => {
+            for (let project of data.filter(d => !d.private)) {
+                let displayProps;
+                fetch(`https://raw.githubusercontent.com/mfboulos/${project.name}/${project.default_branch}/.boulos`)
+                .then(res => {
+                    if (!res.ok) {
+                        throw new Error('Repo has no display properties!')
+                    }
+                    displayProps = res.json()
+                })
+                .catch(err => {})
+
+                if (displayProps) {
+                    this.projects.push(<Project key={project.id} projectProps={project}>{project.name}</Project>)
+                }
+            }
+
+            this.setState({'isLoading': false})
+        })
+        .catch(err => console.log(err.message));
+    }
 
     render() {
-        var projects = [];
-        for (let props of this.stuff) {
-            projects.push(<Project key={props.id} projectProps={props}>{props.name}</Project>);
+        if (this.state.isLoading) {
+            return (
+                <LoadingIcon/>
+            )
         }
-
-        return (
-            <div>
-                <h1>Projects</h1>
-                {projects}
-            </div>
-        )
+        else {
+            return (
+                <div>
+                    <h1>Projects</h1>
+                    <Accordion>{this.projects}</Accordion>
+                </div>
+            )
+        }
     }
 }
 
