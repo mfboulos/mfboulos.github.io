@@ -26,15 +26,14 @@ class App extends React.Component {
               <NavItem style={{'margin': 'auto'}}>
                 <NavLink to="/daily-coding-problem">Other Fun Stuff</NavLink>
               </NavItem>
-              {/* <li class="nav-item">
-                <a class="nav-link" href="html/contact.html">Contact</a>
-              </li> */}
             </Nav>
           </Navbar>
           <div style={{flexGrow: 1, backgroundColor: '#1a1a1a'}}>
-            <Route path="/daily-coding-problem" component={Daily}/>
-            <Route path="/projects" component={Projects}/>
-            <Route path="/resume" component={Resume}/>
+            <div style={{margin: '1%'}}>
+              <Route path="/daily-coding-problem" component={Daily}/>
+              <Route path="/projects" component={Projects}/>
+              <Route path="/resume" component={Resume}/>
+            </div>
           </div>
         </HashRouter>
       </div>
