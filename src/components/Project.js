@@ -8,15 +8,15 @@ class Project extends React.Component {
             <Accordion style={{padding: '3px'}} defaultActiveKey='abc'>
                 <Card style={{borderRadius: '5px', backgroundColor: '#444444'}}>
                     <Accordion.Toggle style={{cursor: 'pointer'}} as={Card.Header} variant='link' eventKey={this.props.id}>
-                        <div style={{fontSize: 20}}>{this.props.project.name}</div>
+                        <div style={{fontSize: 20}}>{this.props.display.name}</div>
                         <div style={{color: '#dddddd',fontSize: 14}}>{this.props.project.description}</div>
                     </Accordion.Toggle>
                 
                     <Accordion.Collapse>
                         <Card.Body style={{backgroundColor: '#616161'}}>
-                            <div style={{display: 'grid', gridTemplateColumns: '70% 10% 20%'}}>
+                            <div style={{display: 'grid', gridTemplateColumns: '60% 10% 30%'}}>
                                 <div style={{gridColumnEnd: 2}}>{this.props.display.description}</div>
-                                <img style={{maxWidth: '100%', minWidth: '150px' , height: 'auto', gridColumnStart: 3}}
+                                <img style={{maxWidth: '100%', minWidth: '150px' , marginLeft: 'auto', height: 'auto', gridColumnStart: 3}}
                                 src={'https://raw.githubusercontent.com/mfboulos/'
                                 + `${this.props.project.name}/${this.props.project.default_branch}/${this.props.display.demo}`} />
                             </div>

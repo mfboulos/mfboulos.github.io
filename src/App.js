@@ -6,6 +6,7 @@ import Daily from './components/Daily';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
+import Footer from './components/Footer';
 
 class App extends React.Component {
   render() {
@@ -35,6 +36,7 @@ class App extends React.Component {
               <Route path="/resume" component={Resume}/>
             </div>
           </div>
+          <Footer />
         </HashRouter>
       </div>
     )
