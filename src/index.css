@@ -16,6 +16,10 @@ h1 {
   padding-bottom: 20px;
 }
 
+h3 {
+  color: rgb(221, 252, 254);
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

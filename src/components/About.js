@@ -1,9 +1,11 @@
 import React from 'react'
 
-class Daily extends React.Component {
+class About extends React.Component {
     render() {
-        return <div>Daily Coding Problem</div>
+        return (
+            <h1>About Me</h1>
+        )
     }
 }
 
-export default Daily;
+export default About;
