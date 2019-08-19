@@ -67,7 +67,7 @@ class TechStackIcon extends React.Component {
 
         if (file) {
             return (
-                <img src={file} style={{height: '100px', padding: '10px', ...this.props.style}} title={this.props.tech} alt={this.props.tech} />
+                <img src={file} style={{borderRadius: '15px', height: '100px', padding: '10px', ...this.props.style}} title={this.props.tech} alt={this.props.tech} />
             )
         }
         else {
