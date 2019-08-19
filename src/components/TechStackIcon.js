@@ -19,6 +19,13 @@ import github from '../static/github.svg';
 import jira from '../static/jira.jpg';
 import opengl from '../static/opengl.png';
 import cpp from '../static/cpp.png';
+import neo4j from '../static/neo4j.png';
+import c from '../static/c.png';
+import css from '../static/css.png';
+import html from '../static/html.jpg';
+import reactLogo from '../static/react.svg';
+import aws from '../static/aws.png';
+import jenkins from '../static/jenkins.png';
 
 class TechStackIcon extends React.Component {
     icons = {
@@ -41,7 +48,14 @@ class TechStackIcon extends React.Component {
         github: github,
         jira: jira,
         opengl: opengl,
-        cpp: cpp
+        c: c,
+        cpp: cpp,
+        neo4j: neo4j,
+        css: css,
+        html: html,
+        react: reactLogo,
+        aws: aws,
+        jenkins: jenkins
     };
 
     render() {
