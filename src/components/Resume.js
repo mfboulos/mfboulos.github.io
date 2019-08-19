@@ -1,5 +1,6 @@
 import React from 'react';
 import WorkProject from './WorkProject';
+import calpoly from '../static/calpoly.png';
 
 class Resume extends React.Component {
     workProjects = [
@@ -65,8 +66,17 @@ class Resume extends React.Component {
         return (
             <div>
                 <h1>Work Projects</h1>
-                <div style={{width: '100%'}}>
+                <div style={{margin: '20px'}}>
                     {this.workProjects.map((p, index) => <WorkProject key={index} {...p} />)}
+                </div>
+                <h1>Education</h1>
+                <div style={{margin: '20px', display: 'grid', gridTemplateColumns: '200px auto'}}>
+                    <img style={{height: '150px', gridColumnEnd: 2}} src={calpoly} title='Cal Poly San Luis Obispo'/>
+                    <div style={{gridColumnStart: 2}}>
+                        <h3>California Polytechnic State University, San Luis Obispo</h3>
+                        <p style={{color: '#dddddd'}}>September 2013 - June 2017</p>
+                        <p>B.S in Mathematics, minor in Computer Science</p>
+                    </div>
                 </div>
             </div>
         )

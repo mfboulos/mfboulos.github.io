@@ -12,10 +12,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
-  padding-bottom: 20px;
-}
-
 h3 {
   color: rgb(221, 252, 254);
 }

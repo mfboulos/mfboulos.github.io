@@ -5,7 +5,7 @@ import TechStackIcon from './TechStackIcon';
 class WorkProject extends React.Component {
     render() {
         return (
-            <Accordion style={{padding: '3px'}} defaultActiveKey='abc'>
+            <Accordion style={{padding: '3px'}}>
                 <Card style={{borderRadius: '5px', backgroundColor: '#444444'}}>
                     <Accordion.Toggle style={{cursor: 'pointer'}} as={Card.Header} variant='link' eventKey={this.props.id}>
                         <div style={{fontSize: 20}}>{this.props.name}</div>
