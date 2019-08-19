@@ -34,7 +34,7 @@ class App extends React.Component {
               </NavItem>
             </Nav>
           </Navbar>
-          <div style={{flexGrow: 1, backgroundColor: '#1a1a1a'}}>
+          <div style={{flexGrow: 1, marginBottom: '70px', backgroundColor: '#1a1a1a'}}>
             <div style={{margin: '30px'}}>
               <Route path="/about" component={About}/>
               <Route path="/projects" component={Projects}/>
