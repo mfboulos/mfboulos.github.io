@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Accordion } from 'react-bootstrap';
 import GithubButton from './GithubButton';
-import TechStackIcon from './TechStackIcon';
+import TechStackCard from './TechStackCard';
 
 class Project extends React.Component {
     render() {
@@ -29,7 +29,7 @@ class Project extends React.Component {
                                 </div>
                                 <div style={{gridColumnStart: 3}}>
                                     <h3>Tech Stack:</h3>
-                                    {this.props.display.stack.map((t, index) => <TechStackIcon key={index} tech={t} />)}
+                                    {this.props.display.stack.map((t, index) => <TechStackCard key={index} tech={t} />)}
                                 </div>
                             </div>
                             <div style={{marginTop: '20px'}}>

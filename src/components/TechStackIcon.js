@@ -67,12 +67,17 @@ class TechStackIcon extends React.Component {
 
         if (file) {
             return (
-                <img src={file} style={{height: '80px', margin: '10px'}}
-                title={this.props.tech} alt={this.props.tech} />
+                <img src={file} style={{height: '100px', padding: '10px', ...this.props.style}} title={this.props.tech} alt={this.props.tech} />
             )
         }
         else {
-            return <span style={{fontSize: 20}}>{this.props.tech}</span>
+            return (
+                <div style={{fontSize: 20, display: 'table', width: '100px', height: '100px', ...this.props.style}}>
+                    <div style={{display: 'table-cell', verticalAlign: 'middle', color: 'white', textAlign: 'center'}}>
+                        No icon available
+                    </div>
+                </div>
+            )
         }
     }
 }

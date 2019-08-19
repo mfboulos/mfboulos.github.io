@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Accordion } from 'react-bootstrap';
-import TechStackIcon from './TechStackIcon';
+import TechStackCard from './TechStackCard';
 
 class WorkProject extends React.Component {
     render() {
@@ -32,7 +32,7 @@ class WorkProject extends React.Component {
                             </div>
                             <div style={{marginTop: '20px'}}>
                                 <h3>Tech Stack</h3>
-                                {this.props.techStack.map((tech, index) => <TechStackIcon key={index} tech={tech} />)}
+                                {this.props.techStack.map((tech, index) => <TechStackCard key={index} tech={tech} />)}
                             </div>
                         </Card.Body>
                     </Accordion.Collapse>
