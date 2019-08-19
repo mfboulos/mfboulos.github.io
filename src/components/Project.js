@@ -17,17 +17,18 @@ class Project extends React.Component {
                             <div style={{display: 'grid', gridTemplateColumns: '60% 10% 30%'}}>
                                 <div style={{gridColumnEnd: 2}}>{this.props.display.description}</div>
                                 <img style={{maxWidth: '100%', minWidth: '150px' , marginLeft: 'auto', height: 'auto', gridColumnStart: 3}}
+                                alt='Demo'
                                 src={'https://raw.githubusercontent.com/mfboulos/'
                                 + `${this.props.project.name}/${this.props.project.default_branch}/${this.props.display.demo}`} />
                             </div>
                             <div style={{marginTop: '20px', display: 'grid', gridTemplateColumns: '45% 10% 45%'}}>
                                 <div style={{gridColumnEnd: 2}}>
                                     <h3>Features:</h3>
-                                    {this.props.display.features.map(feature => <li>{feature}</li>)}
+                                    {this.props.display.features.map((feature, index) => <li key={index}>{feature}</li>)}
                                 </div>
                                 <div style={{gridColumnStart: 3}}>
                                     <h3>Tech Stack:</h3>
-                                    {this.props.display.stack.map(t => <li>{t}</li>)}
+                                    {this.props.display.stack.map((t, index) => <li key={index}>{t}</li>)}
                                 </div>
                             </div>
                             <div style={{marginTop: '20px'}}>

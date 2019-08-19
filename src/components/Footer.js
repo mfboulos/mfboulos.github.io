@@ -1,13 +1,8 @@
 import React from 'react';
 import BrandButton from './BrandButton';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInbox, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = (props) => {
-    library.add(fab, faInbox, faMobileAlt);
-
     return (
         <div style={{backgroundColor: '#1a1a1a', position: 'fixed', left: 0, bottom: 0, width: '100%'}}>
             <div style={{marginLeft: '2.5%', marginRight: '2.5%', width: '95%'}}>

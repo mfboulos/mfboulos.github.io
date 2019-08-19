@@ -1,5 +1,4 @@
 import React from 'react'
-import { Accordion } from 'react-bootstrap';
 import Project from './Project';
 import LoadingIcon from './Loading'
 
@@ -47,19 +46,12 @@ class Projects extends React.Component {
     }
 
     render() {
-        if (this.state.isLoading) {
-            return (
-                <LoadingIcon/>
-            )
-        }
-        else {
-            return (
-                <div>
-                    <h1>Projects</h1>
-                    {this.projects}
-                </div>
-            )
-        }
+        return (
+            <div>
+                <h1>Projects</h1>
+                {this.state.isLoading ? <LoadingIcon/> : <div>{this.projects}</div>}
+            </div>
+        )
     }
 }
 
