@@ -70,7 +70,7 @@ class Resume extends React.Component {
                     {this.workProjects.map((p, index) => <WorkProject key={index} {...p} />)}
                 </div>
                 <h1>Education</h1>
-                <div style={{margin: '20px', display: 'grid', gridTemplateColumns: '200px auto'}}>
+                <div style={{margin: '20px', display: 'grid', gridTemplateColumns: '175px auto'}}>
                     <img style={{height: '150px', gridColumnEnd: 2}} src={calpoly} title='Cal Poly San Luis Obispo'/>
                     <div style={{gridColumnStart: 2}}>
                         <h3>California Polytechnic State University, San Luis Obispo</h3>
