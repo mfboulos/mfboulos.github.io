@@ -1,23 +1,30 @@
 import React from 'react';
+import { Card, Accordion } from 'react-bootstrap';
+import GithubButton from './GithubButton'
 
 class Project extends React.Component {
     render() {
         return (
-            <div className="card">
-                <div className="card-header" id="headingOne">
-                    <h5 className="mb-0">
-                    <button className="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        {this.props.projectProps.name}
-                    </button>
-                    </h5>
-                </div>
-            
-                <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div className="card-body">
-                        {this.props.projectProps.description}
-                    </div>
-                </div>
-            </div>
+            <Accordion style={{padding: '3px'}} defaultActiveKey='abc'>
+                <Card style={{borderRadius: '5px', backgroundColor: '#444444'}}>
+                    <Accordion.Toggle style={{cursor: 'pointer'}} as={Card.Header} variant='link' eventKey={this.props.id}>
+                        <div style={{fontSize: 20}}>{this.props.project.name}</div>
+                        <div style={{color: '#dddddd',fontSize: 14}}>{this.props.project.description}</div>
+                    </Accordion.Toggle>
+                
+                    <Accordion.Collapse>
+                        <Card.Body style={{backgroundColor: '#616161'}}>
+                            {/* {this.props.display.description} */}
+                            <div style={{display: 'grid', gridTemplateColumns: '80% 20%'}}>
+                                <img style={{maxWidth: '100%', minWidth: '150px' , height: 'auto', gridColumnStart: 2}} src={this.props.display.img}></img>
+                            </div>
+                            <div style={{marginTop: '10px'}}>
+                                <GithubButton url={this.props.project.html_url} />
+                            </div>
+                        </Card.Body>
+                    </Accordion.Collapse>
+                </Card>
+            </Accordion>
         )
     }
 }

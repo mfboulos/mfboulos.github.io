@@ -34,7 +34,7 @@ class Projects extends React.Component {
                 .catch(err => {})
 
                 if (displayProps) {
-                    this.projects.push(<Project key={project.id} projectProps={project}>{project.name}</Project>)
+                    this.projects.push(<Project key={project.id} project={project} display={displayProps}></Project>)
                 }
             }
 
@@ -53,7 +53,7 @@ class Projects extends React.Component {
             return (
                 <div>
                     <h1>Projects</h1>
-                    <Accordion>{this.projects}</Accordion>
+                    {this.projects}
                 </div>
             )
         }
