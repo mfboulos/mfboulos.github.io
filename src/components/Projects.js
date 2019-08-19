@@ -22,23 +22,26 @@ class Projects extends React.Component {
             throw new Error('There was a problem retrieving repos!')
         })
         .then((data) => {
+            let amountDone = 0
             for (let project of data.filter(d => !d.private)) {
-                let displayProps;
-                fetch(`https://raw.githubusercontent.com/mfboulos/${project.name}/${project.default_branch}/.boulos`)
+                fetch(`https://raw.githubusercontent.com/mfboulos/${project.name}/${project.default_branch}/boulos.json`)
                 .then(res => {
                     if (!res.ok) {
                         throw new Error('Repo has no display properties!')
                     }
-                    displayProps = res.json()
+                    return res.json()
+                })
+                .then(data => {
+                    this.projects.push(<Project key={project.id} project={project} display={data}></Project>)
                 })
                 .catch(err => {})
-
-                if (displayProps) {
-                    this.projects.push(<Project key={project.id} project={project} display={displayProps}></Project>)
-                }
+                .finally(() => {
+                    amountDone++
+                    if (amountDone === data.filter(d => !d.private).length) {
+                        this.setState({'isLoading': false})
+                    }
+                })
             }
-
-            this.setState({'isLoading': false})
         })
         .catch(err => console.log(err.message));
     }
