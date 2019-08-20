@@ -28,7 +28,7 @@ import aws from '../static/aws.png';
 import jenkins from '../static/jenkins.png';
 
 class TechStackIcon extends React.Component {
-    icons = {
+    static icons = {
         java: java,
         junit: junit,
         spring: spring,
@@ -63,11 +63,12 @@ class TechStackIcon extends React.Component {
         if (tech === 'c++') {
             tech = 'cpp'
         }
-        let file = this.icons[tech]
+        let file = TechStackIcon.icons[tech]
 
         if (file) {
             return (
-                <img src={file} style={{borderRadius: '15px', height: '100px', padding: '10px', ...this.props.style}} title={this.props.tech} alt={this.props.tech} />
+                <img src={file} style={{borderRadius: '15px', height: '100px', padding: '10px', ...this.props.style}}
+                title={this.props.title ? this.props.title : this.props.tech} alt={this.props.tech} />
             )
         }
         else {

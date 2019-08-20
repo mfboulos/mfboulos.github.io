@@ -1,10 +1,11 @@
 import React from 'react';
-import { HashRouter, Route, Link } from 'react-router-dom';
+import { HashRouter, Route, Switch, Link } from 'react-router-dom';
 import './App.css';
 import NavLink from './components/NavLink';
 import About from './components/About';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
+import Landing from './components/Landing';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import Footer from './components/Footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -36,9 +37,12 @@ class App extends React.Component {
           </Navbar>
           <div style={{flexGrow: 1, marginBottom: '70px', backgroundColor: '#1a1a1a'}}>
             <div style={{margin: '30px'}}>
-              <Route path="/about" component={About}/>
-              <Route path="/projects" component={Projects}/>
-              <Route path="/resume" component={Resume}/>
+              <Switch>
+                <Route path="/about" component={About}/>
+                <Route path="/projects" component={Projects}/>
+                <Route path="/resume" component={Resume}/>
+                <Route path="/" component={Landing}/>
+              </Switch>
             </div>
           </div>
           <Footer />
