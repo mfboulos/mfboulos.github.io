@@ -60,6 +60,50 @@ class TechStackIcon extends React.Component {
         hibernate: hibernate
     };
 
+    static niceName(tech) {
+        let t = tech.toLowerCase()
+        if (t === 'c++' || t === 'cpp') {
+            return 'C++'
+        }
+
+        let icon = TechStackIcon.icons[t]
+        if (icon) {
+            if (icon === opengl) {
+                return 'OpenGL'
+            }
+            else if (icon === bitbucket) {
+                return 'BitBucket'
+            }
+            else if (icon === vscode) {
+                return 'VSCode'
+            }
+            else if (icon === corenlp) {
+                return 'CoreNLP'
+            }
+            else if (icon === mongodb) {
+                return 'MongoDB'
+            }
+            else if (icon === oraclesql) {
+                return 'OracleSQL'
+            }
+            else if (icon === javascript) {
+                return 'JavaScript'
+            }
+            else if (icon === junit) {
+                return 'JUnit'
+            }
+            else if (icon === github) {
+                return 'GitHub'
+            }
+            else {
+                return t.charAt(0).toUpperCase() + t.slice(1)
+            }
+        }
+        else {
+            return tech
+        }
+    }
+
     static getCategory(tech) {
         let icon = TechStackIcon.getIcon(tech)
         let categories = []
@@ -76,13 +120,13 @@ class TechStackIcon extends React.Component {
         if ([maven, bitbucket, git, github, aws, jenkins, docker].includes(icon)) {
             categories.push('DevOps')
         }
-        if ([junit, postman, maven]) {
+        if ([junit, postman, maven].includes(icon)) {
             categories.push('Testing')
         }
-        if ([eclipse, vscode]) {
+        if ([eclipse, vscode].includes(icon)) {
             categories.push('IDE')
         }
-        if ([github, jira]) {
+        if ([github, jira].includes(icon)) {
             categories.push('Issue Documentation')
         }
         

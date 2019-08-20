@@ -5,6 +5,7 @@ import NavLink from './components/NavLink';
 import About from './components/About';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
+import Skills from './components/Skills';
 import Landing from './components/Landing';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import Footer from './components/Footer';
@@ -31,6 +32,9 @@ class App extends React.Component {
                 <NavLink to="/projects">Projects</NavLink>
               </NavItem>
               <NavItem style={{'margin': 'auto'}}>
+                <NavLink to="/skills">Skills</NavLink>
+              </NavItem>
+              <NavItem style={{'margin': 'auto'}}>
                 <NavLink to="/about">About</NavLink>
               </NavItem>
             </Nav>
@@ -41,6 +45,7 @@ class App extends React.Component {
                 <Route path="/about" component={About}/>
                 <Route path="/projects" component={Projects}/>
                 <Route path="/resume" component={Resume}/>
+                <Route path="/skills" component={Skills}/>
                 <Route path="/" component={Landing}/>
               </Switch>
             </div>
