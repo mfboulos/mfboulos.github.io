@@ -26,6 +26,7 @@ import html from '../static/html.jpg';
 import reactLogo from '../static/react.svg';
 import aws from '../static/aws.png';
 import jenkins from '../static/jenkins.png';
+import hibernate from '../static/hibernate.png';
 
 class TechStackIcon extends React.Component {
     static icons = {
@@ -55,15 +56,50 @@ class TechStackIcon extends React.Component {
         html: html,
         react: reactLogo,
         aws: aws,
-        jenkins: jenkins
+        jenkins: jenkins,
+        hibernate: hibernate
     };
 
-    render() {
-        let tech = this.props.tech.toLowerCase()
+    static getCategory(tech) {
+        let icon = TechStackIcon.getIcon(tech)
+        let categories = []
+
+        if ([java, python, javascript, c, cpp, oraclesql].includes(icon)) {
+            categories.push('Programming Language')
+        }
+        if ([oraclesql, mongodb, neo4j, hibernate].includes(icon)) {
+            categories.push('Database')
+        }
+        if ([spring, angular, reactLogo, hibernate, opengl, corenlp, junit].includes(icon)) {
+            categories.push('Frameworks, Libraries, and API\'s')
+        }
+        if ([maven, bitbucket, git, github, aws, jenkins, docker].includes(icon)) {
+            categories.push('DevOps')
+        }
+        if ([junit, postman, maven]) {
+            categories.push('Testing')
+        }
+        if ([eclipse, vscode]) {
+            categories.push('IDE')
+        }
+        if ([github, jira]) {
+            categories.push('Issue Documentation')
+        }
+        
+        return categories
+    }
+
+    static getIcon(name) {
+        let tech = name.toLowerCase()
         if (tech === 'c++') {
             tech = 'cpp'
         }
-        let file = TechStackIcon.icons[tech]
+
+        return TechStackIcon.icons[tech]
+    }
+
+    render() {
+        let file = TechStackIcon.getIcon(this.props.tech)
 
         if (file) {
             return (
