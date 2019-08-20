@@ -71,9 +71,8 @@ class Landing extends React.Component {
                 {this.state.isLoading ? <LoadingIcon/> : this.icons}
                 {this.state.isLoading ? null : this.engineer}
                 {this.state.isLoading ? null : this.mathematician}
-                <div style={{cursor: 'pointer', position: 'absolute', bottom: '90px', left: '20px',
-                outline: '3px solid #ddfcfe'}}
-                onClick={this.refreshIcons}>
+                <div style={{position: 'absolute', bottom: '90px', left: '20px'}}
+                className='cButton' onClick={this.refreshIcons}>
                     <div style={{padding: '5px', userSelect: 'none'}}>Shuffle!</div>
                 </div>
             </div>

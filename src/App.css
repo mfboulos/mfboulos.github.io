@@ -31,3 +31,15 @@
     transform: rotate(360deg);
   }
 }
+
+.cButton {
+  cursor: pointer;
+  outline: 3px solid #ddfcfe;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier();
+}
+
+.cButton:active {
+  background-color: rgba(224, 252, 254, 0.25) !important
+}

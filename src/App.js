@@ -26,7 +26,7 @@ class App extends React.Component {
             </Navbar.Brand>
             <Nav fill style={{width: '100%', marginLeft: 'auto'}} >
               <NavItem style={{'margin': 'auto'}}>
-                <NavLink to="/resume">Qualifications</NavLink>
+                <NavLink to="/experience">Experience</NavLink>
               </NavItem>
               <NavItem style={{'margin': 'auto'}}>
                 <NavLink to="/projects">Projects</NavLink>
@@ -40,11 +40,11 @@ class App extends React.Component {
             </Nav>
           </Navbar>
           <div style={{flexGrow: 1, marginBottom: '70px', backgroundColor: '#1a1a1a'}}>
-            <div style={{margin: '30px'}}>
+            <div style={{padding: '30px'}}>
               <Switch>
                 <Route path="/about" component={About}/>
                 <Route path="/projects" component={Projects}/>
-                <Route path="/resume" component={Resume}/>
+                <Route path="/experience" component={Resume}/>
                 <Route path="/skills" component={Skills}/>
                 <Route path="/" component={Landing}/>
               </Switch>
