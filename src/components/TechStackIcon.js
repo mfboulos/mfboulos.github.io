@@ -117,7 +117,7 @@ class TechStackIcon extends React.Component {
         if ([spring, angular, reactLogo, hibernate, opengl, corenlp, junit].includes(icon)) {
             categories.push('Frameworks, Libraries, and API\'s')
         }
-        if ([maven, bitbucket, git, github, aws, jenkins, docker].includes(icon)) {
+        if ([maven, bitbucket, git, github, aws, jenkins, docker, jira].includes(icon)) {
             categories.push('DevOps')
         }
         if ([junit, postman, maven].includes(icon)) {
@@ -126,10 +126,6 @@ class TechStackIcon extends React.Component {
         if ([eclipse, vscode].includes(icon)) {
             categories.push('IDE')
         }
-        if ([github, jira].includes(icon)) {
-            categories.push('Issue Documentation')
-        }
-        
         return categories
     }
 

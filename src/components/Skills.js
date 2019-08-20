@@ -31,7 +31,7 @@ class Skills extends React.Component {
         return (
             <div>
                 <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '20px'}}>
-                    {['Programming Language', 'Database', 'Frameworks, Libraries, and API\'s', 'DevOps', 'Testing', 'IDE', 'Issue Documentation'].map(c => 
+                    {['Programming Language', 'Database', 'Frameworks, Libraries, and API\'s', 'DevOps', 'Testing', 'IDE'].map(c => 
                         <div style={{cursor: 'pointer', margin: 'auto', outline: '3px solid #ddfcfe',
                         backgroundColor: c === this.state.currentFilter ? 'rgba(224, 252, 254, 0.2)' : null}}
                         onClick={this.onButtonClick(c)}>
