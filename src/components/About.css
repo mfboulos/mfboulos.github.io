@@ -1,0 +1,13 @@
+blockquote {
+    color: #ddfcfe;
+    padding-left: 20px;
+    border-left: 4px solid #ddfcfe;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.bio {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
