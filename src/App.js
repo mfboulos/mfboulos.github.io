@@ -7,20 +7,65 @@ import Resume from './components/Resume';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Landing from './components/Landing';
-import { Nav, Navbar, NavItem } from 'react-bootstrap';
+import { Nav, Navbar, NavItem, NavDropdown } from 'react-bootstrap';
 import Footer from './components/Footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faInbox, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faInbox, faMobileAlt, faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class App extends React.Component {
+  constructor(props) {
+    super()
+    this.state = {isNavBurgered: window.innerWidth < 576, isNavExpanded: false}
+    this.toggleNavbarExpanded = this.toggleNavbarExpanded.bind(this)
+  }
+
+  updateDimensions() {
+    let isNavBurgered = window.innerWidth < 576
+    this.setState({isNavBurgered: isNavBurgered, isNavExpanded: this.state.isNavExpanded && isNavBurgered})
+  }
+
+  toggleNavbarExpanded() {
+    this.setState({isNavExpanded: !this.state.isNavExpanded})
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.updateDimensions.bind(this))
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions.bind(this));
+  }
+
   render() {
-    library.add(fab, faInbox, faMobileAlt)
+    library.add(fab, faInbox, faMobileAlt, faBars)
     
     return (
       <div style={{display: 'flex', flexFlow: 'column', height: '100%'}}>
         <HashRouter>
-          <Navbar variant="dark" bg="dark" expand="sm" sticky="top" style={{ "maxHeight": "50px" }}>
+          { this.state.isNavBurgered
+          ? <Navbar variant="dark" bg="dark" expand="sm" sticky="top" expanded={this.state.isNavExpanded}>
+            <Navbar.Brand>
+              <Link style={{'textDecoration': 'none', 'color': '#ddfcfe'}} to="/">Michael Boulos</Link>
+            </Navbar.Brand>
+            <FontAwesomeIcon id='burger' color='#ddfcfe' icon='bars' onClick={this.toggleNavbarExpanded} />
+            <Navbar.Collapse>
+              <NavItem style={{'margin': '5px'}}>
+                <NavLink onClick={this.toggleNavbarExpanded} to="/about">About</NavLink>
+              </NavItem>
+              <NavItem style={{'margin': '5px'}}>
+                <NavLink onClick={this.toggleNavbarExpanded} to="/experience">Experience</NavLink>
+              </NavItem>
+              <NavItem style={{'margin': '5px'}}>
+                <NavLink onClick={this.toggleNavbarExpanded} to="/skills">Skills</NavLink>
+              </NavItem>
+              <NavItem style={{'margin': '5px'}}>
+                <NavLink onClick={this.toggleNavbarExpanded} to="/projects">Projects</NavLink>
+              </NavItem>
+            </Navbar.Collapse>
+          </Navbar>
+          : <Navbar variant="dark" bg="dark" expand="sm" sticky="top">
             <Navbar.Brand>
               <Link style={{'textDecoration': 'none', 'color': '#ddfcfe'}} to="/">Michael Boulos</Link>
             </Navbar.Brand>
@@ -39,6 +84,7 @@ class App extends React.Component {
               </NavItem>
             </Nav>
           </Navbar>
+          }
           <div style={{flexGrow: 1, marginBottom: '70px', backgroundColor: '#1a1a1a'}}>
             <div style={{padding: '30px'}}>
               <Switch>
