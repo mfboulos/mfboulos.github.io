@@ -26,16 +26,16 @@ class App extends React.Component {
             </Navbar.Brand>
             <Nav fill style={{width: '100%', marginLeft: 'auto'}} >
               <NavItem style={{'margin': 'auto'}}>
-                <NavLink to="/experience">Experience</NavLink>
+                <NavLink to="/about">About</NavLink>
               </NavItem>
               <NavItem style={{'margin': 'auto'}}>
-                <NavLink to="/projects">Projects</NavLink>
+                <NavLink to="/experience">Experience</NavLink>
               </NavItem>
               <NavItem style={{'margin': 'auto'}}>
                 <NavLink to="/skills">Skills</NavLink>
               </NavItem>
               <NavItem style={{'margin': 'auto'}}>
-                <NavLink to="/about">About</NavLink>
+                <NavLink to="/projects">Projects</NavLink>
               </NavItem>
             </Nav>
           </Navbar>
