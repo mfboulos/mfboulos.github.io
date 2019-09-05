@@ -4,7 +4,7 @@ import junit from '../static/junit.png';
 import spring from '../static/spring.svg';
 import maven from '../static/maven.png';
 import javascript from '../static/javascript.png';
-import oraclesql from '../static/oraclesql.png';
+import sql from '../static/oraclesql.png';
 import mongodb from '../static/mongodb.svg';
 import python from '../static/python.png';
 import angular from '../static/angular.svg';
@@ -35,7 +35,7 @@ class TechStackIcon extends React.Component {
         spring: spring,
         maven: maven,
         javascript: javascript,
-        oraclesql: oraclesql,
+        sql: sql,
         mongodb: mongodb,
         python: python,
         angular: angular,
@@ -83,8 +83,8 @@ class TechStackIcon extends React.Component {
             else if (icon === mongodb) {
                 return 'MongoDB'
             }
-            else if (icon === oraclesql) {
-                return 'OracleSQL'
+            else if (icon === sql) {
+                return 'SQL'
             }
             else if (icon === javascript) {
                 return 'JavaScript'
@@ -108,10 +108,10 @@ class TechStackIcon extends React.Component {
         let icon = TechStackIcon.getIcon(tech)
         let categories = []
 
-        if ([java, python, javascript, c, cpp, oraclesql].includes(icon)) {
+        if ([java, python, javascript, c, cpp, sql].includes(icon)) {
             categories.push('Programming Language')
         }
-        if ([oraclesql, mongodb, neo4j, hibernate].includes(icon)) {
+        if ([sql, mongodb, neo4j, hibernate].includes(icon)) {
             categories.push('Database')
         }
         if ([spring, angular, reactLogo, hibernate, opengl, corenlp, junit].includes(icon)) {
@@ -133,6 +133,9 @@ class TechStackIcon extends React.Component {
         let tech = name.toLowerCase()
         if (tech === 'c++') {
             tech = 'cpp'
+        }
+        if (tech.includes('sql')) {
+            tech = 'sql'
         }
 
         return TechStackIcon.icons[tech]
