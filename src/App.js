@@ -86,7 +86,7 @@ class App extends React.Component {
           </Navbar>
           }
           <div style={{flexGrow: 1, marginTop: '56px', marginBottom: '70px', backgroundColor: '#1a1a1a'}}>
-            <div style={{padding: '30px'}}>
+            <div style={{padding: '5%'}}>
               <Switch>
                 <Route path="/about" component={About}/>
                 <Route path="/projects" component={Projects}/>
