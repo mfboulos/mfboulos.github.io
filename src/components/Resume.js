@@ -6,7 +6,7 @@ class Resume extends React.Component {
     workProjects = [
         {
             name: 'NLP Benefits',
-            shortDescription: 'ETL software for parsing thousands of Anthem EOC documents into a knowledge base',
+            shortDescription: 'ETL software for parsing thousands of Anthem insurance documents into a knowledge base',
             role: 'Software Developer',
             start: 'August 2018',
             end: 'July 2019',
@@ -66,11 +66,11 @@ class Resume extends React.Component {
         return (
             <div>
                 <h1>Work Projects</h1>
-                <div style={{margin: '20px'}}>
+                <div style={{margin: '5%'}}>
                     {this.workProjects.map((p, index) => <WorkProject key={index} {...p} />)}
                 </div>
                 <h1>Education</h1>
-                <div style={{margin: '20px', display: 'grid', gridTemplateColumns: '175px auto'}}>
+                <div style={{margin: '5%', display: 'grid', gridTemplateColumns: '175px auto'}}>
                     <img style={{height: '150px', gridColumnEnd: 2}} src={calpoly} title='Cal Poly San Luis Obispo'/>
                     <div style={{gridColumnStart: 2}}>
                         <h3>California Polytechnic State University, San Luis Obispo</h3>
