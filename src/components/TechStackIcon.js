@@ -83,9 +83,6 @@ class TechStackIcon extends React.Component {
             else if (icon === mongodb) {
                 return 'MongoDB'
             }
-            else if (icon === sql) {
-                return 'SQL'
-            }
             else if (icon === javascript) {
                 return 'JavaScript'
             }
@@ -94,6 +91,9 @@ class TechStackIcon extends React.Component {
             }
             else if (icon === github) {
                 return 'GitHub'
+            }
+            else if ([aws, css, html, sql].includes(icon)) {
+                return t.toUpperCase()
             }
             else {
                 return t.charAt(0).toUpperCase() + t.slice(1)
@@ -146,13 +146,13 @@ class TechStackIcon extends React.Component {
 
         if (file) {
             return (
-                <img src={file} style={{borderRadius: '15px', height: '100px', padding: '10px', ...this.props.style}}
+                <img src={file} style={{margin: 'auto', borderRadius: '15px', padding: window.innerWidth/50 + 'px', ...this.props.style}}
                 title={this.props.title ? this.props.title : this.props.tech} alt={this.props.tech} />
             )
         }
         else {
             return (
-                <div style={{fontSize: 20, display: 'table', width: '100px', height: '100px', ...this.props.style}}>
+                <div style={{fontSize: '10vw', display: 'table', width: '100%', height: '100%', ...this.props.style}}>
                     <div style={{display: 'table-cell', verticalAlign: 'middle', color: 'white', textAlign: 'center'}}>
                         No icon available
                     </div>
