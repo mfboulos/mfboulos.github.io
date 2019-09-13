@@ -63,6 +63,28 @@ class Resume extends React.Component {
     ]
 
     render() {
+        let isWideEnough = window.innerWidth > 600
+
+        let education = isWideEnough
+        ? <div style={{margin: '5%', display: 'grid', gridTemplateColumns: '175px auto'}}>
+            <img style={{height: '150px', gridColumnEnd: 2}} src={calpoly} title='Cal Poly San Luis Obispo'/>
+            <div style={{gridColumnStart: 2}}>
+                <h3>California Polytechnic State University, San Luis Obispo</h3>
+                <p style={{color: '#dddddd'}}>September 2013 - June 2017</p>
+                <p>B.S in Mathematics, minor in Computer Science</p>
+            </div>
+        </div>
+        : <div style={{margin: '5%'}}>
+            <div style={{width: '100%'}}>
+                <img style={{display: 'block', margin: 'auto', height: '150px'}} src={calpoly} title='Cal Poly San Luis Obispo'/>
+            </div>
+            <div style={{marginTop: '20px'}}>
+                <h3>California Polytechnic State University, San Luis Obispo</h3>
+                <p style={{color: '#dddddd'}}>September 2013 - June 2017</p>
+                <p>B.S in Mathematics, minor in Computer Science</p>
+            </div>
+        </div>
+
         return (
             <div>
                 <h1>Work Projects</h1>
@@ -70,14 +92,7 @@ class Resume extends React.Component {
                     {this.workProjects.map((p, index) => <WorkProject key={index} {...p} />)}
                 </div>
                 <h1>Education</h1>
-                <div style={{margin: '5%', display: 'grid', gridTemplateColumns: '175px auto'}}>
-                    <img style={{height: '150px', gridColumnEnd: 2}} src={calpoly} title='Cal Poly San Luis Obispo'/>
-                    <div style={{gridColumnStart: 2}}>
-                        <h3>California Polytechnic State University, San Luis Obispo</h3>
-                        <p style={{color: '#dddddd'}}>September 2013 - June 2017</p>
-                        <p>B.S in Mathematics, minor in Computer Science</p>
-                    </div>
-                </div>
+                {education}
             </div>
         )
     }
