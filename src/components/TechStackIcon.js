@@ -152,7 +152,7 @@ class TechStackIcon extends React.Component {
         }
         else {
             return (
-                <div style={{fontSize: '10vw', display: 'table', width: '100%', height: '100%', ...this.props.style}}>
+                <div style={{fontSize: '3vw', display: 'table', height: '100%', ...this.props.style}}>
                     <div style={{display: 'table-cell', verticalAlign: 'middle', color: 'white', textAlign: 'center'}}>
                         No icon available
                     </div>
