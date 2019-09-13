@@ -49,7 +49,9 @@ class Projects extends React.Component {
         return (
             <div>
                 <h1>Projects</h1>
-                {this.state.isLoading ? <LoadingIcon/> : <div style={{margin: '5%'}}>{this.projects}</div>}
+                {this.state.isLoading
+                    ? <LoadingIcon/>
+                    : <div style={{margin: Math.min(window.innerWidth / 20, 30) + 'px'}}>{this.projects}</div>}
             </div>
         )
     }

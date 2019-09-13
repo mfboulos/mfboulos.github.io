@@ -4,7 +4,7 @@ import './About.css';
 class About extends React.Component {
     render() {
         return (
-            <div style={{fontSize: 20, padding: window.innerWidth/20, paddingTop: '0px'}}>
+            <div style={{fontSize: 20, paddingLeft: window.innerWidth/20, paddingRight: window.innerWidth/20}}>
                 <blockquote>
                     Eccentric backend-focused software engineer pushing the
                     boundaries of performance and the impossible, building great
