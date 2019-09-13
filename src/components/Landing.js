@@ -57,15 +57,16 @@ class Landing extends React.Component {
     }
 
     componentDidMount() {
+        this.placeIcons(window.innerWidth, window.innerHeight)
         this.setState({isLoading: false})
     }
 
     refreshIcons() {
+        this.placeIcons(window.innerWidth, window.innerHeight)
         this.setState({dummy: !this.state.dummy})
     }
 
     render () {
-        this.placeIcons(window.innerWidth, window.innerHeight)
         return (
             <div>
                 {this.state.isLoading ? <LoadingIcon/> : this.icons}
