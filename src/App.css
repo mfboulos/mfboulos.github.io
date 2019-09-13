@@ -48,3 +48,7 @@
   outline: 1px solid rgba(224, 252, 254, 0.75);
   outline-offset: 6px;
 }
+
+nav:focus {
+  outline: 0px;
+}

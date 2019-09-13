@@ -19,6 +19,7 @@ class App extends React.Component {
     super()
     this.state = {isNavBurgered: window.innerWidth < 576, isNavExpanded: false}
     this.toggleNavbarExpanded = this.toggleNavbarExpanded.bind(this)
+    this.collapseNavbar = this.collapseNavbar.bind(this)
   }
 
   updateDimensions() {
@@ -28,6 +29,10 @@ class App extends React.Component {
 
   toggleNavbarExpanded() {
     this.setState({isNavExpanded: !this.state.isNavExpanded})
+  }
+
+  collapseNavbar() {
+    this.setState({isNavExpanded: false})
   }
 
   componentDidMount() {
@@ -45,23 +50,23 @@ class App extends React.Component {
       <div style={{display: 'flex', flexFlow: 'column', height: '100%'}}>
         <HashRouter>
           { this.state.isNavBurgered
-          ? <Navbar variant="dark" bg="dark" expand="sm" fixed="top" expanded={this.state.isNavExpanded}>
+          ? <Navbar tabIndex="0" onBlur={this.collapseNavbar} variant="dark" bg="dark" expand="sm" fixed="top" expanded={this.state.isNavExpanded}>
             <Navbar.Brand>
               <Link style={{'textDecoration': 'none', 'color': '#ddfcfe'}} to="/">Michael Boulos</Link>
             </Navbar.Brand>
             <FontAwesomeIcon id='burger' color='#ddfcfe' icon='bars' onClick={this.toggleNavbarExpanded} />
             <Navbar.Collapse>
               <NavItem style={{'margin': '10px'}}>
-                <NavLink onClick={this.toggleNavbarExpanded} to="/about">About</NavLink>
+                <NavLink onClick={this.collapseNavbar} to="/about">About</NavLink>
               </NavItem>
               <NavItem style={{'margin': '10px'}}>
-                <NavLink onClick={this.toggleNavbarExpanded} to="/experience">Experience</NavLink>
+                <NavLink onClick={this.collapseNavbar} to="/experience">Experience</NavLink>
               </NavItem>
               <NavItem style={{'margin': '10px'}}>
-                <NavLink onClick={this.toggleNavbarExpanded} to="/skills">Skills</NavLink>
+                <NavLink onClick={this.collapseNavbar} to="/skills">Skills</NavLink>
               </NavItem>
               <NavItem style={{'margin': '10px'}}>
-                <NavLink onClick={this.toggleNavbarExpanded} to="/projects">Projects</NavLink>
+                <NavLink onClick={this.collapseNavbar} to="/projects">Projects</NavLink>
               </NavItem>
             </Navbar.Collapse>
           </Navbar>
