@@ -142,6 +142,9 @@ class TechStackIcon extends React.Component {
         if (tech.includes('sql')) {
             tech = 'sql'
         }
+        if (tech === 'twilio api') {
+            tech = 'twilio'
+        }
 
         return TechStackIcon.icons[tech]
     }
