@@ -27,6 +27,7 @@ import reactLogo from '../static/react.svg';
 import aws from '../static/aws.png';
 import jenkins from '../static/jenkins.png';
 import hibernate from '../static/hibernate.png';
+import twilio from '../static/twilio.svg';
 
 class TechStackIcon extends React.Component {
     static icons = {
@@ -57,7 +58,8 @@ class TechStackIcon extends React.Component {
         react: reactLogo,
         aws: aws,
         jenkins: jenkins,
-        hibernate: hibernate
+        hibernate: hibernate,
+        twilio: twilio
     };
 
     static niceName(tech) {
@@ -92,6 +94,9 @@ class TechStackIcon extends React.Component {
             else if (icon === github) {
                 return 'GitHub'
             }
+            else if (icon === twilio) {
+                return 'Twilio API'
+            }
             else if ([aws, css, html, sql].includes(icon)) {
                 return t.toUpperCase()
             }
@@ -114,7 +119,7 @@ class TechStackIcon extends React.Component {
         if ([sql, mongodb, neo4j, hibernate].includes(icon)) {
             categories.push('Database')
         }
-        if ([spring, angular, reactLogo, hibernate, opengl, corenlp, junit].includes(icon)) {
+        if ([spring, angular, reactLogo, hibernate, opengl, corenlp, junit, twilio].includes(icon)) {
             categories.push('Frameworks, Libraries, and API\'s')
         }
         if ([maven, bitbucket, git, github, aws, jenkins, docker, jira].includes(icon)) {
