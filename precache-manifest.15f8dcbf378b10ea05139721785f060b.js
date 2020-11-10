@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8c4d3598dd8819122233d541a0703b10",
+    "revision": "a0aa40f7967246b2190625183620a9d4",
     "url": "/index.html"
   },
   {
-    "revision": "d666d87501ba05078168",
+    "revision": "b9cf5bd65ae353b3762c",
     "url": "/static/css/main.a77ec0ea.chunk.css"
   },
   {
-    "revision": "97130ae5ab4e972bf227",
-    "url": "/static/js/2.9a3e49c9.chunk.js"
+    "revision": "c8465ade15d501d521cb",
+    "url": "/static/js/2.c8db631a.chunk.js"
   },
   {
-    "revision": "d666d87501ba05078168",
-    "url": "/static/js/main.a3716a0b.chunk.js"
+    "revision": "b9cf5bd65ae353b3762c",
+    "url": "/static/js/main.ae34e2ed.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -134,6 +134,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "94e3a0e30868563d77a7e948c2b1c4b3",
     "url": "/static/media/twilio.94e3a0e3.svg"
+  },
+  {
+    "revision": "de67947ca874ad4f75db38b01f061a84",
+    "url": "/static/media/typescript.de67947c.png"
   },
   {
     "revision": "92357ff83d959b411c04558295f392a4",
