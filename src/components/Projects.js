@@ -23,7 +23,7 @@ class Projects extends React.Component {
         .then((data) => {
             let amountDone = 0
             data.sort((d1, d2) => new Date(d2.updated_at) - new Date(d1.updated_at))
-            for (let project of data.filter(d => !d.private)) {
+            data.filter(d => !d.private).forEach(project => {
                 fetch(`https://raw.githubusercontent.com/mfboulos/${project.name}/${project.default_branch}/boulos.json`)
                 .then(res => {
                     if (!res.ok) {
@@ -41,7 +41,7 @@ class Projects extends React.Component {
                         this.setState({'isLoading': false})
                     }
                 })
-            }
+            })
         })
         .catch(err => console.log(err.message));
     }

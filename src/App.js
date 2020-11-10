@@ -7,7 +7,7 @@ import Resume from './components/Resume';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Landing from './components/Landing';
-import { Nav, Navbar, NavItem, NavDropdown } from 'react-bootstrap';
+import { Nav, Navbar, NavItem } from 'react-bootstrap';
 import Footer from './components/Footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';

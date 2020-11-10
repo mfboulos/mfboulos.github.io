@@ -5,9 +5,64 @@ import calpoly from '../static/calpoly.png';
 class Resume extends React.Component {
     workProjects = [
         {
+            name: 'Batch Module',
+            shortDescription: 'Modern web-based Sepasoft MES tools built for ISA-88 compliance on the Ignition platform',
+            role: 'Lead Frontend Software Engineer',
+            start: 'April 2020',
+            end: 'Present',
+            roles: [
+                'Led development on React user interface for a seamless, uniform experience across all modular Perspective components',
+                'Developed crucial UI components for core Batch functionality along with corresponding delegates in the backend',
+            ],
+            accomplishments: [
+                'Completed the core elements of the Batch UI workflow well before major conference demos',
+                'Integrated Batch procedures with GoJS to allow users to interact with ISA-88 equipment and logic steps as nodes in a graph',
+                'Developed several general use internal components to significantly decrease development time and seamlessly adapt theming changes'
+            ],
+            techStack: [
+                'React',
+                'Material UI',
+                'Java',
+                'JUnit',
+                'npm',
+                'Webpack',
+                'Gradle',
+                'Python',
+                'IntelliJ',
+                'Bitbucket',
+                'Git',
+                'JIRA'
+            ]
+        },
+        {
+            name: 'Sepasoft MES',
+            shortDescription: 'Suite of MES enterprise tools built to efficiently and effectively satisfy the ISA-95 standard',
+            role: 'Full Stack Software Engineer',
+            start: 'Jan 2020',
+            end: 'Present',
+            roles: [
+                'Maintained integrity of several concurrent software versions to ensure compatibility with various Ignition versions, SQL variants, and server configurations',
+                'Designed long term solutions for foundational elements of backend infrastructure to prevent date-time lapses while upholding backwards compatibility',
+            ],
+            accomplishments: [
+                'Redefined equipment shifts to account for breaks and spanning over multiple days',
+                'Integrated new shift logic and equipment efficiency to calculate new analytical metrics'
+            ],
+            techStack: [
+                'Java',
+                'JUnit',
+                'Maven',
+                'Python',
+                'Eclipse',
+                'Bitbucket',
+                'Git',
+                'JIRA'
+            ]
+        },
+        {
             name: 'NLP Benefits',
             shortDescription: 'ETL software for parsing thousands of Anthem insurance documents into a knowledge base',
-            role: 'Software Developer',
+            role: 'Software Engineer',
             start: 'August 2018',
             end: 'July 2019',
             roles: [
@@ -39,7 +94,7 @@ class Resume extends React.Component {
         {
             name: 'AssignForce',
             shortDescription: "Online training batch management application for Revature's VP of Technology",
-            role: 'Software Developer',
+            role: 'Software Engineer',
             start: 'June 2018',
             end: 'July 2018',
             roles: [
@@ -67,7 +122,7 @@ class Resume extends React.Component {
 
         let education = isWideEnough
         ? <div style={{margin: Math.min(window.innerWidth / 20, 30) + 'px', display: 'grid', gridTemplateColumns: '175px auto'}}>
-            <img style={{height: '150px', gridColumnEnd: 2}} src={calpoly} title='Cal Poly San Luis Obispo'/>
+            <img style={{height: '150px', gridColumnEnd: 2}} src={calpoly} alt='' title='Cal Poly San Luis Obispo'/>
             <div style={{gridColumnStart: 2}}>
                 <h3>California Polytechnic State University, San Luis Obispo</h3>
                 <p style={{color: '#dddddd'}}>September 2013 - June 2017</p>
@@ -76,7 +131,7 @@ class Resume extends React.Component {
         </div>
         : <div style={{margin: Math.min(window.innerWidth / 20, 30) + 'px'}}>
             <div style={{width: '100%'}}>
-                <img style={{display: 'block', margin: 'auto', height: '150px'}} src={calpoly} title='Cal Poly San Luis Obispo'/>
+                <img style={{display: 'block', margin: 'auto', height: '150px'}} src={calpoly} alt='' title='Cal Poly San Luis Obispo'/>
             </div>
             <div style={{marginTop: '20px'}}>
                 <h3>California Polytechnic State University, San Luis Obispo</h3>

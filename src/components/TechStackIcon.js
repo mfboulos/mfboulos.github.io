@@ -28,21 +28,39 @@ import aws from '../static/aws.png';
 import jenkins from '../static/jenkins.png';
 import hibernate from '../static/hibernate.png';
 import twilio from '../static/twilio.svg';
+import npm from '../static/npm.png';
+import gradle from '../static/gradle.png';
+import intellij from '../static/intellij.png';
+import ignition from '../static/ignition.png';
+import materialui from '../static/materialui.png';
+import webpack from '../static/webpack.png';
 
 class TechStackIcon extends React.Component {
     static icons = {
+        python: python,
         java: java,
+        c: c,
+        cpp: cpp,
+        javascript: javascript,
+        react: reactLogo,
+        css: css,
+        html: html,
         junit: junit,
         spring: spring,
         maven: maven,
-        javascript: javascript,
+        npm: npm,
+        webpack: webpack,
+        aws: aws,
+        jenkins: jenkins,
+        gradle: gradle,
         sql: sql,
         mongodb: mongodb,
-        python: python,
+        neo4j: neo4j,
         angular: angular,
         corenlp: corenlp,
-        eclipse: eclipse,
         vscode: vscode,
+        eclipse: eclipse,
+        intellij: intellij,
         postman: postman,
         bitbucket: bitbucket,
         docker: docker,
@@ -50,16 +68,10 @@ class TechStackIcon extends React.Component {
         github: github,
         jira: jira,
         opengl: opengl,
-        c: c,
-        cpp: cpp,
-        neo4j: neo4j,
-        css: css,
-        html: html,
-        react: reactLogo,
-        aws: aws,
-        jenkins: jenkins,
+        materialui: materialui,
         hibernate: hibernate,
-        twilio: twilio
+        twilio: twilio,
+        ignition: ignition
     };
 
     static niceName(tech) {
@@ -97,6 +109,15 @@ class TechStackIcon extends React.Component {
             else if (icon === twilio) {
                 return 'Twilio API'
             }
+            else if (icon === intellij) {
+                return 'IntelliJ'
+            }
+            else if (icon === materialui) {
+                return 'Material UI'
+            }
+            else if (icon === npm) {
+                return 'npm'
+            }
             else if ([aws, css, html, sql].includes(icon)) {
                 return t.toUpperCase()
             }
@@ -119,16 +140,16 @@ class TechStackIcon extends React.Component {
         if ([sql, mongodb, neo4j, hibernate].includes(icon)) {
             categories.push('Database')
         }
-        if ([spring, angular, reactLogo, hibernate, opengl, corenlp, junit, twilio].includes(icon)) {
+        if ([spring, angular, reactLogo, hibernate, opengl, corenlp, junit, twilio, ignition, materialui, webpack].includes(icon)) {
             categories.push('Frameworks, Libraries, and API\'s')
         }
-        if ([maven, bitbucket, git, github, aws, jenkins, docker, jira].includes(icon)) {
+        if ([maven, gradle, bitbucket, git, github, aws, jenkins, docker, jira, npm].includes(icon)) {
             categories.push('DevOps')
         }
-        if ([junit, postman, maven].includes(icon)) {
+        if ([junit, postman, maven, gradle].includes(icon)) {
             categories.push('Testing')
         }
-        if ([eclipse, vscode].includes(icon)) {
+        if ([eclipse, vscode, intellij].includes(icon)) {
             categories.push('IDE')
         }
         return categories
@@ -144,6 +165,9 @@ class TechStackIcon extends React.Component {
         }
         if (tech === 'twilio api') {
             tech = 'twilio'
+        }
+        if (tech === 'material ui') {
+            tech = 'materialui'
         }
 
         return TechStackIcon.icons[tech]

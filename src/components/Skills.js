@@ -9,7 +9,7 @@ class Skills extends React.Component {
     })
 
     constructor(props) {
-        super()
+        super(props)
         this.state = {currentFilter: null}
         this.onButtonClick = this.onButtonClick.bind(this)
     }
@@ -39,11 +39,17 @@ class Skills extends React.Component {
         return (
             <div>
                 {buttons.map(list =>
-                    <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '20px'}}>
+                    <div key={list} style={{display: 'flex', justifyContent: 'space-between', marginBottom: '20px'}}>
                         {list.map(c => 
-                            <div className='cButton' style={{margin: 'auto',
-                            backgroundColor: c === this.state.currentFilter ? 'rgba(224, 252, 254, 0.15)' : null}}
-                            onClick={this.onButtonClick(c)}>
+                            <div
+                                key={c}
+                                className='cButton'
+                                style={{
+                                    margin: 'auto',
+                                    backgroundColor: c === this.state.currentFilter ? 'rgba(224, 252, 254, 0.15)' : null
+                                }}
+                                onClick={this.onButtonClick(c)}
+                            >
                                 <div style={{padding: '5px', userSelect: 'none'}}>{c}</div>
                             </div>
                         )}

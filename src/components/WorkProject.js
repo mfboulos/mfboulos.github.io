@@ -60,7 +60,7 @@ class WorkProject extends React.Component {
                         <Card.Body style={{backgroundColor: '#616161'}}>
                             {rolesAndAccomplishments}
                             <div style={{marginTop: '20px'}}>
-                                <h3>Tech Stack</h3>
+                                <h3>Tech Stack:</h3>
                                 {this.props.techStack.map((tech, index) => <TechStackCard key={index} tech={tech} />)}
                             </div>
                         </Card.Body>
