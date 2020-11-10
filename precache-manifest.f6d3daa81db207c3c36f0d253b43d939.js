@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ec95e5b34e1974696df5db4e0ee500f6",
+    "revision": "8c4d3598dd8819122233d541a0703b10",
     "url": "/index.html"
   },
   {
-    "revision": "f2be6173a26729048f36",
-    "url": "/static/css/main.f310e916.chunk.css"
+    "revision": "d666d87501ba05078168",
+    "url": "/static/css/main.a77ec0ea.chunk.css"
   },
   {
-    "revision": "27ef83a2f0f722cc816e",
-    "url": "/static/js/2.334aabb9.chunk.js"
+    "revision": "97130ae5ab4e972bf227",
+    "url": "/static/js/2.9a3e49c9.chunk.js"
   },
   {
-    "revision": "f2be6173a26729048f36",
-    "url": "/static/js/main.a73e8546.chunk.js"
+    "revision": "d666d87501ba05078168",
+    "url": "/static/js/main.a3716a0b.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -68,8 +68,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/github.76d344f0.svg"
   },
   {
+    "revision": "ae3abab4995b5b495f70d148a6c69668",
+    "url": "/static/media/gradle.ae3abab4.png"
+  },
+  {
     "revision": "454a400ca987d4271e54045982ea3876",
     "url": "/static/media/html.454a400c.png"
+  },
+  {
+    "revision": "8dd5f7d7c002005109fe86ff56275bb2",
+    "url": "/static/media/intellij.8dd5f7d7.png"
   },
   {
     "revision": "4eb1819dc863ef386e09d86e9f482a9f",
@@ -86,6 +94,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "89e8531b45edce1ad9656d21504e9c76",
     "url": "/static/media/jira.89e8531b.png"
+  },
+  {
+    "revision": "d2b1e19091a3530dfb8bec06b5a926dc",
+    "url": "/static/media/materialui.d2b1e190.png"
   },
   {
     "revision": "a9c62cf943c457fc610c551e4e209d7a",
@@ -126,5 +138,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "92357ff83d959b411c04558295f392a4",
     "url": "/static/media/vscode.92357ff8.ico"
+  },
+  {
+    "revision": "c500a3801d8356a86da86a06c3d13a4d",
+    "url": "/static/media/webpack.c500a380.png"
   }
 ]);
