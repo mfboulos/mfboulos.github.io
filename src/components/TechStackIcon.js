@@ -4,6 +4,7 @@ import junit from '../static/junit.png';
 import spring from '../static/spring.svg';
 import maven from '../static/maven.png';
 import javascript from '../static/javascript.png';
+import typescript from '../static/typescript.png';
 import sql from '../static/oraclesql.png';
 import mongodb from '../static/mongodb.svg';
 import python from '../static/python.png';
@@ -42,6 +43,7 @@ class TechStackIcon extends React.Component {
         c: c,
         cpp: cpp,
         javascript: javascript,
+        typescript: typescript,
         react: reactLogo,
         css: css,
         html: html,
@@ -100,6 +102,9 @@ class TechStackIcon extends React.Component {
             else if (icon === javascript) {
                 return 'JavaScript'
             }
+            else if (icon === typescript) {
+                return 'TypeScript'
+            }
             else if (icon === junit) {
                 return 'JUnit'
             }
@@ -134,7 +139,7 @@ class TechStackIcon extends React.Component {
         let icon = TechStackIcon.getIcon(tech)
         let categories = []
 
-        if ([java, python, javascript, c, cpp, sql].includes(icon)) {
+        if ([java, python, javascript, typescript, c, cpp, sql].includes(icon)) {
             categories.push('Programming Language')
         }
         if ([sql, mongodb, neo4j, hibernate].includes(icon)) {
