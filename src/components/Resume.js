@@ -9,7 +9,6 @@ class Resume extends React.Component {
             shortDescription: 'Structured quality reporting system for ESRD patients and providers',
             role: 'Full Stack Software Engineer',
             start: 'July 2021',
-            end: 'Current',
             roles: [
                 'Designed incremental data migration system for archiving billions of clinical health records using a network of lightweight AWS Lambda applications, offloading work to Postgres RDS and Redshift and communicating through SQS'
             ],
@@ -19,15 +18,14 @@ class Resume extends React.Component {
                 'Developed data archival Java AWS Lambda to migrate billions of records between schemas using Redshift Copy/Unload'
             ],
             techStack: [
-                'React',
-                'JavaScript',
-                'Material UI',
                 'Java',
                 'JUnit',
+                'SQL',
+                'AWS',
                 'Maven',
                 'Eclipse',
                 'Git',
-                'AWS',
+                'SQL',
                 'JIRA'
             ]
         },
@@ -60,6 +58,7 @@ class Resume extends React.Component {
                 'Java',
                 'Spring',
                 'JUnit',
+                'MongoDB',
                 'Maven',
                 'Docker',
                 'Postman',
@@ -73,7 +72,7 @@ class Resume extends React.Component {
             shortDescription: 'Modern web-based Sepasoft MES tools built for ISA-88 compliance on the Ignition platform',
             role: 'Lead Frontend Software Engineer',
             start: 'April 2020',
-            end: 'Present',
+            end: 'Nov 2020',
             roles: [
                 'Led development on React user interface for a seamless, uniform experience across all modular Perspective components',
                 'Developed crucial UI components for core Batch functionality along with corresponding delegates in the backend',
@@ -104,7 +103,7 @@ class Resume extends React.Component {
             shortDescription: 'Suite of MES enterprise tools built to efficiently and effectively satisfy the ISA-95 standard',
             role: 'Full Stack Software Engineer',
             start: 'Jan 2020',
-            end: 'Present',
+            end: 'Nov 2020',
             roles: [
                 'Maintained integrity of several concurrent software versions to ensure compatibility with various Ignition versions, SQL variants, and server configurations',
                 'Designed long term solutions for foundational elements of backend infrastructure to prevent date-time lapses while upholding backwards compatibility',

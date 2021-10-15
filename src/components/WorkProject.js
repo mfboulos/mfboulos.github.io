@@ -39,11 +39,11 @@ class WorkProject extends React.Component {
             ? <div>
                 <div style={{position: 'absolute', top: '15px', right: '20px'}}>{this.props.role}</div>
                 <div style={{position: 'absolute', top: '40px', right: '20px', color: '#dddddd',
-                maxWidth: '25%', textAlign: 'right', fontSize: 12}}>{this.props.start} - {this.props.end}</div>
+                maxWidth: '25%', textAlign: 'right', fontSize: 12}}>{this.props.start} - {this.props.end || 'Present'}</div>
             </div>
             : <div>
                 <div style={{marginTop: '20px'}}>{this.props.role}</div>
-                <div style={{color: '#dddddd', fontSize: 12}}>{this.props.start} - {this.props.end}</div>
+                <div style={{color: '#dddddd', fontSize: 12}}>{this.props.start} - {this.props.end || 'Present'}</div>
             </div>
 
         return (
