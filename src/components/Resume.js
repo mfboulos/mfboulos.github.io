@@ -5,6 +5,63 @@ import calpoly from '../static/calpoly.png';
 class Resume extends React.Component {
     workProjects = [
         {
+            name: 'EQRS',
+            shortDescription: 'Structured quality reporting system for ESRD patients and providers',
+            role: 'Full Stack Software Engineer',
+            start: 'July 2021',
+            end: 'Current',
+            roles: [
+                'Designed incremental data migration system for archiving billions of clinical health records using a network of lightweight AWS Lambda applications, offloading work to Postgres RDS and Redshift and communicating through SQS'
+            ],
+            accomplishments: [
+                'Orchestrated AWS Lambda deployment with S3 upload, proper IAM execution roles, SQS queue triggers, and secure credential retrieval in code through the Parameter Store and Secrets Manager',
+                'Supervised data archival development through working sessions and thorough code review',
+                'Developed data archival Java AWS Lambda to migrate billions of records between schemas using Redshift Copy/Unload'
+            ],
+            techStack: [
+                'React',
+                'JavaScript',
+                'Material UI',
+                'Java',
+                'JUnit',
+                'Maven',
+                'Eclipse',
+                'Git',
+                'AWS',
+                'JIRA'
+            ]
+        },
+        {
+            name: 'UniFHIR',
+            shortDescription: 'FHIR-compliant server built for healthcare data exchange',
+            role: 'Full Stack Software Engineer',
+            start: 'February 2021',
+            end: 'July 2021',
+            roles: [
+                'Developed React frontend to expose UniFHIR functionality on a readable, responsive interface',
+                'Developed and refactored crucial components of the UniFHIR backend framework to reduce duplicated work and improve application resiliency',
+            ],
+            accomplishments: [
+                'Integrated markdown formatting, sophisticated routing logic, and Material UI into UniFHIR documentation interface for a modern, simple, and elegant user experience',
+                'Leveraged HAPI FHIR server as a baseline for FHIR server specification compliance in a Java Spring Boot environment',
+                'Redesigned backend search and validation libraries to an enumeration of search parameter groups and validation criteria, reducing significant code bloat',
+                'Simplified ongoing development support for new FHIR resources and search parameters to enumeration edits, reducing long-term development efforts from days to minutes'
+            ],
+            techStack: [
+                'React',
+                'JavaScript',
+                'Material UI',
+                'npm',
+                'Java',
+                'Spring',
+                'JUnit',
+                'Maven',
+                'Eclipse',
+                'Git',
+                'JIRA'
+            ]
+        },
+        {
             name: 'Batch Module',
             shortDescription: 'Modern web-based Sepasoft MES tools built for ISA-88 compliance on the Ignition platform',
             role: 'Lead Frontend Software Engineer',
