@@ -43,6 +43,8 @@ class Resume extends React.Component {
             ],
             accomplishments: [
                 'Integrated markdown formatting, sophisticated routing logic, and Material UI into UniFHIR documentation interface for a modern, simple, and elegant user experience',
+                'Developed authentication workflow through an Okta OAuth2 handshake',
+                'Established frontend testing framework using Jest to assert crucial functionality and Enzyme to isolate component units',
                 'Leveraged HAPI FHIR server as a baseline for FHIR server specification compliance in a Java Spring Boot environment',
                 'Redesigned backend search and validation libraries to an enumeration of search parameter groups and validation criteria, reducing significant code bloat',
                 'Simplified ongoing development support for new FHIR resources and search parameters to enumeration edits, reducing long-term development efforts from days to minutes'
@@ -50,12 +52,17 @@ class Resume extends React.Component {
             techStack: [
                 'React',
                 'JavaScript',
+                'Jest',
+                'Enzyme',
                 'Material UI',
+                'Okta',
                 'npm',
                 'Java',
                 'Spring',
                 'JUnit',
                 'Maven',
+                'Docker',
+                'Postman',
                 'Eclipse',
                 'Git',
                 'JIRA'
@@ -143,6 +150,7 @@ class Resume extends React.Component {
                 'Python',
                 'CoreNLP',
                 'Eclipse',
+                'Spyder',
                 'Postman',
                 'Bitbucket',
                 'Git',
