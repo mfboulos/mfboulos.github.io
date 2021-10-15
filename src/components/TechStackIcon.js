@@ -5,6 +5,7 @@ import spring from '../static/spring.svg';
 import maven from '../static/maven.png';
 import javascript from '../static/javascript.png';
 import typescript from '../static/typescript.png';
+import jest from '../static/jest.png';
 import sql from '../static/oraclesql.png';
 import mongodb from '../static/mongodb.svg';
 import python from '../static/python.png';
@@ -29,9 +30,12 @@ import aws from '../static/aws.png';
 import jenkins from '../static/jenkins.png';
 import hibernate from '../static/hibernate.png';
 import twilio from '../static/twilio.svg';
+import okta from '../static/okta.png';
+import swagger from '../static/swagger.png';
 import npm from '../static/npm.png';
 import gradle from '../static/gradle.png';
 import intellij from '../static/intellij.png';
+import spyder from '../static/spyder.png'
 import ignition from '../static/ignition.png';
 import materialui from '../static/materialui.png';
 import webpack from '../static/webpack.png';
@@ -44,6 +48,7 @@ class TechStackIcon extends React.Component {
         cpp: cpp,
         javascript: javascript,
         typescript: typescript,
+        jest: jest,
         react: reactLogo,
         css: css,
         html: html,
@@ -73,6 +78,9 @@ class TechStackIcon extends React.Component {
         materialui: materialui,
         hibernate: hibernate,
         twilio: twilio,
+        okta: okta,
+        swagger: swagger,
+        spyder: spyder,
         ignition: ignition
     };
 
@@ -145,16 +153,16 @@ class TechStackIcon extends React.Component {
         if ([sql, mongodb, neo4j, hibernate].includes(icon)) {
             categories.push('Database')
         }
-        if ([spring, angular, reactLogo, hibernate, opengl, corenlp, junit, twilio, ignition, materialui, webpack].includes(icon)) {
+        if ([spring, angular, reactLogo, hibernate, opengl, corenlp, junit, swagger, twilio, ignition, materialui, webpack].includes(icon)) {
             categories.push('Frameworks, Libraries, and API\'s')
         }
-        if ([maven, gradle, bitbucket, git, github, aws, jenkins, docker, jira, npm].includes(icon)) {
+        if ([maven, gradle, bitbucket, git, github, aws, okta, swagger, jenkins, docker, jira, npm].includes(icon)) {
             categories.push('DevOps')
         }
-        if ([junit, postman, maven, gradle].includes(icon)) {
+        if ([junit, jest, postman, maven, gradle].includes(icon)) {
             categories.push('Testing')
         }
-        if ([eclipse, vscode, intellij].includes(icon)) {
+        if ([eclipse, vscode, intellij, spyder].includes(icon)) {
             categories.push('IDE')
         }
         return categories
