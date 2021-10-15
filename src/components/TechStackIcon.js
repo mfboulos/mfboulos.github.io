@@ -30,6 +30,7 @@ import aws from '../static/aws.png';
 import jenkins from '../static/jenkins.png';
 import hibernate from '../static/hibernate.png';
 import twilio from '../static/twilio.svg';
+import twitch from '../static/twitch.png';
 import okta from '../static/okta.png';
 import swagger from '../static/swagger.png';
 import npm from '../static/npm.png';
@@ -39,6 +40,7 @@ import spyder from '../static/spyder.png'
 import ignition from '../static/ignition.png';
 import materialui from '../static/materialui.png';
 import webpack from '../static/webpack.png';
+import go from '../static/go.png';
 
 class TechStackIcon extends React.Component {
     static icons = {
@@ -77,10 +79,12 @@ class TechStackIcon extends React.Component {
         opengl: opengl,
         materialui: materialui,
         hibernate: hibernate,
+        twitch: twitch,
         twilio: twilio,
         okta: okta,
         swagger: swagger,
         spyder: spyder,
+        go: go,
         ignition: ignition
     };
 
@@ -122,6 +126,9 @@ class TechStackIcon extends React.Component {
             else if (icon === twilio) {
                 return 'Twilio API'
             }
+            else if (icon === twitch) {
+                return 'Twitch API'
+            }
             else if (icon === intellij) {
                 return 'IntelliJ'
             }
@@ -147,13 +154,13 @@ class TechStackIcon extends React.Component {
         let icon = TechStackIcon.getIcon(tech)
         let categories = []
 
-        if ([java, python, javascript, typescript, c, cpp, sql].includes(icon)) {
+        if ([java, python, javascript, typescript, go, c, cpp, sql].includes(icon)) {
             categories.push('Programming Language')
         }
         if ([sql, mongodb, neo4j, hibernate].includes(icon)) {
             categories.push('Database')
         }
-        if ([spring, angular, reactLogo, hibernate, opengl, corenlp, junit, swagger, twilio, ignition, materialui, webpack].includes(icon)) {
+        if ([spring, angular, reactLogo, hibernate, opengl, corenlp, junit, swagger, okta, twilio, twitch, ignition, materialui, webpack].includes(icon)) {
             categories.push('Frameworks, Libraries, and API\'s')
         }
         if ([maven, gradle, bitbucket, git, github, aws, okta, swagger, jenkins, docker, jira, npm].includes(icon)) {
@@ -178,6 +185,9 @@ class TechStackIcon extends React.Component {
         }
         if (tech === 'twilio api') {
             tech = 'twilio'
+        }
+        if (tech === 'twitch api') {
+            tech = 'twitch'
         }
         if (tech === 'material ui') {
             tech = 'materialui'

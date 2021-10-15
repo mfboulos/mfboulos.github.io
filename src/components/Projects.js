@@ -4,6 +4,20 @@ import LoadingIcon from './Loading'
 
 const projectData = [
     {
+        "name": "oziachbot",
+        "displayName": "OziachBot",
+        "description": "IRC chatbot built to engage Twitch viewers with Old School Runescape API's, such as the Wiki page, and the Hiscores API. The bot was developed to run server-side on many streams concurrently, with robust architecture/security to protect user credentials and a light level of configuration for default usernames. This project development was suspended in November 2019 due to upkeep cost.",
+        "features": [
+            "IRC framework developed in Go leveraging go-irc and native Go concurrency",
+            "Queries API's for external retrieval from user queries",
+            "OAuth2 authentication through the Twitch API",
+            "Configurable user settings for simplified viewer and user experience"
+        ],
+        "stack": [
+            "Neo4j", "Go", "AWS", "React", "JavaScript", "Twitch", "Git", "Docker"
+        ]
+    },
+    {
         "name": "downtime-alerter",
         "displayName": "SMS Downtime Alerter",
         "description": "Application that watches a URL, and notifies by SMS using the Twilio API as soon as it goes down. This was primarily developed to monitor the health of this portfolio while being hosted by Github Pages, but any URL that can handle a GET request can be monitored.",
